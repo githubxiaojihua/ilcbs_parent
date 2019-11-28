@@ -1,0 +1,23 @@
+0、将项目pom文件中的依赖关系，更多的是三大框架和主要依赖导入到parent pom文件中
+1、建立各个模块，主要分为server,client,及utils,exception,cache等公用类,还有一个jms主要用于发消息的
+2、建立各个模块之间的依赖关系
+3、拷贝项目webapp下的文件到licbs_server_web的webapp文件下，前端用已经写好的。
+   注意所有的页面都在web-inf下面也就是说不能直接访问，
+4、拷贝applicationContext.xml和struts.xml
+5、拷贝action包中的三个action:BaseAction HomeAction LoginAction，由于这三个ACTION依赖ilcbs_utils中的
+   包因此将项目中的ilcbs_util中的文件都拷贝过来
+
+6、创建表空间导入SQL
+    create tablespace itcast29701
+    datafile 'c:/itcast29701.dbf'
+    size 100m
+    autoextend on
+    next 10m
+
+    create user itcast297 identified by itcast297
+    default tablespace itcast29701
+
+    grant dba to itcast297
+
+7、配置spring data jpa对dao层的接口进行增强，在测试类中测试spring data jpa 对接口的增强
+8、写action层，继承baseAction，实现分页。deptlist页面

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/data/jpa 
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+	
+	<!-- 1.dataSource-->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.237.128:1521:orcl" />
+		<property name="user" value="itcast297" />
+		<property name="password" value="itcast297" />
+	</bean>
+
+	<!-- 使用spring data jpa，因为jpa是规范，hibernate遵从jpa规范，jap一般就是用entityManager -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<!-- 指定数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 指定jpa扫描的包-->
+		<property name="packagesToScan" value="com.xiaojihua.domain" />
+		<!-- 指定持久层使用的具体提供者，也就是告诉spring data jpa用哪个具体实现-->
+		<property name="persistenceProvider">
+			<bean class="org.hibernate.jpa.HibernatePersistenceProvider" />
+		</property>
+		<!--JPA的供应商适配器 用于指定hibernate支持的数据库类型-->
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="generateDdl" value="false" />
+				<!-- 使用ORACLE-->
+				<property name="database" value="ORACLE" />
+				<!-- 设置数据库方言-->
+				<property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+		<!-- jpa方言 -->
+		<property name="jpaDialect">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+		</property>
+		<!-- jap属性设置（一般都有默认设置，删除也不影响）-->
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="hibernate.query.substitutions" value="true 1, false 0" />
+				<entry key="hibernate.default_batch_fetch_size" value="16" />
+				<entry key="hibernate.max_fetch_depth" value="2" />
+				<entry key="hibernate.enable_lazy_load_no_trans" value="true"></entry>
+				<entry key="hibernate.generate_statistics" value="true" />
+				<entry key="hibernate.bytecode.use_reflection_optimizer"
+					value="true" />
+				<entry key="hibernate.cache.use_second_level_cache" value="false" />
+				<entry key="hibernate.cache.use_query_cache" value="false" />
+			</map>
+		</property>
+	</bean>
+	
+	<!-- JdbcTemplate配置 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	     <property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 告诉spring生成shiro代理子类时，采用cglib方式生成 -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	
+	<!-- 3.事务管理器-->
+	<!-- JPA事务管理器  -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<!-- 整合spring data jpa，对dao层的接口做增强，dao层只需要有接口就行，jap有自己的实现来增强
+		 增强事物
+	-->
+	<jpa:repositories base-package="com.xiaojihua.dao"
+		transaction-manager-ref="transactionManager"
+		entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
+	<!-- 4.txAdvice-->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="insert*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="find*" read-only="true"/>
+			<tx:method name="*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 5.aop-->
+	<aop:config>
+		<aop:pointcut id="pointcut" expression="execution(* com.xiaojihua.service.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut" />
+	</aop:config>
+	
+	<context:component-scan base-package="com.xiaojihua"></context:component-scan>
+		
+	<!--组装其它 配置文件-->
+	
+</beans>
