@@ -20,4 +20,9 @@
     grant dba to itcast297
 
 7、配置spring data jpa对dao层的接口进行增强，在测试类中测试spring data jpa 对接口的增强
-8、写action层，继承baseAction，实现分页。deptlist页面
+8、写action层，继承baseAction，实现分页。deptlist页面，完成了【系统管理】--【部门管理】部门列表的分页查询。
+   这里面用到了util中的page类，page类自带组件样式，将js,html,css等组成的分页组建作为links变量放到了值栈中，
+   前端直接在jsp页面拿出来显示，这样组建的样式、上下页的逻辑啥的都就弄好了。
+
+
+具体教程和每天干了什么看mybase教程

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	
+	
+	<package name="default" namespace="/" extends="struts-default">
+	   <global-results>
+	      <result name="error">/WEB-INF/pages/error.jsp</result>
+	   </global-results>
+		<!-- struts2的声明式异常，把action请求处理时没有捕获的异常在执行时进行处理
+			 exception属性是用来指定需要捕获异常的类型，属性值一般是异常类型的类全路径。
+			 result则是指定捕获异常后需要执行的result结果，该result可以是来自当前的action中
+			 声明的result也可以是来自global-result中声明的result
+		-->
+		<global-exception-mappings>
+		    <exception-mapping result="error" exception="cn.itcast.exception.SysException"></exception-mapping>
+		    <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+		
+	</package>
+
+	
+</struts>
+	

@@ -3,6 +3,7 @@ package com.xiaojihua.serviceImpl;
 import com.xiaojihua.dao.DeptDao;
 import com.xiaojihua.domain.Dept;
 import com.xiaojihua.service.DeptService;
+import com.xiaojihua.utils.UtilFuns;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,8 +35,19 @@ public class DeptServiceImpl implements DeptService {
         return dao.findAll(spec,pageable);
     }
 
+    /**
+     * 更新和插入都走dao.save方法。
+     * 根据entity的id来判断是否是新增，如果id是新的那么就是新增，
+     * 如果id已经在数据库中了那么就是修改。
+     * @param entity
+     */
     @Override
     public void saveOrUpdate(Dept entity) {
+        if(UtilFuns.isEmpty(entity.getId())){
+            entity.setState(1);//如果是新增的话设置状态值
+        }else{
+
+        }
         dao.save(entity);
     }
 

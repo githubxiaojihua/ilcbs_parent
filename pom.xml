@@ -43,14 +43,14 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.4</version>
+            <version>4.5.3</version>
         </dependency>
 
         <!-- fastjson start  -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.1.37</version>
+            <version>1.2.62</version>
         </dependency>
         <!-- fastjson end -->
 
@@ -295,7 +295,16 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- 集成junit，在测试文件中无需在每次都加载spring配置文件-->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.2.4.RELEASE</version>
             <scope>test</scope>
         </dependency>
 
@@ -305,13 +314,12 @@
             <version>${mysql.version}</version>
         </dependency>
 
-        <!-- oracle  start  -->
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
             <version>10.2.0.4.0</version>
         </dependency>
-        <!-- oracle end  -->
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -374,13 +382,6 @@
             <version>3.7</version>
         </dependency>
         <!-- spring 与 mq整合  end -->
-
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.2.4.RELEASE</version>
-        </dependency>
 
         <!-- itext  start -->
         <dependency>

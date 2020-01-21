@@ -18,6 +18,11 @@ public class Dept implements Serializable {
     @Column(name="dept_name")
     private String deptName;  	//部门名称
 
+    /*
+        joinColum是用于指定主键和外键的对应关系
+        name是外键名称，
+        referencedColumnName是外键对应的主表的主键字段名
+     */
     @ManyToOne
     @JoinColumn(name="parent_id",referencedColumnName="dept_id")
     private Dept parent;  		//父部门
