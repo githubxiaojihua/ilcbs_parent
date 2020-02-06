@@ -1,16 +1,22 @@
 package com.xiaojihua.web.action.sysadmin;
 
-import java.util.List;
+import java.util.*;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSON;
+import com.xiaojihua.domain.Module;
 import com.xiaojihua.domain.Role;
+import com.xiaojihua.service.ModuleService;
 import com.xiaojihua.service.RoleService;
 import com.xiaojihua.utils.Page;
 import com.xiaojihua.web.action.BaseAction;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
@@ -26,6 +32,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 
 	@Autowired
 	private RoleService roleService;
+
+	@Autowired
+	private ModuleService moduleService;
 
 	private Role model = new Role();
 
@@ -45,7 +54,17 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 		this.page = page;
 	}
 
-	@Action(value = "roleAction_list", results = {
+	private String moduleIds;
+
+    public String getModuleIds() {
+        return moduleIds;
+    }
+
+    public void setModuleIds(String moduleIds) {
+        this.moduleIds = moduleIds;
+    }
+
+    @Action(value = "roleAction_list", results = {
 			@Result(name = "list", location = "/WEB-INF/pages/sysadmin/role/jRoleList.jsp") })
 	public String list() throws Exception {
 		// TODO Auto-generated method stub
@@ -156,4 +175,124 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 		
 		return "alist";
 	}
+
+	@Action(value="roleAction_tomodule",results={@Result(name="toModule",location="/WEB-INF/pages/sysadmin/role/jRoleModule.jsp")})
+	public String toModule(){
+        Role role = roleService.get(model.getId());
+        super.push(role);
+        return "toModule";
+	}
+
+	//这里使用手工拼装json字符串的方式
+	//@Action(value="roleAction_genzTreeNodes")
+	public String genzTreeNodes_old() throws Exception{
+        // 返回ajax请求后的json字符串满足ztree的数据
+
+        // 1。根据id获取角色对象
+        Role role = roleService.get(model.getId());
+        Set<Module> roleModules = role.getModules(); //用户所拥有的所有模块
+
+        // 2.查询所有的模块
+        Specification<Module> spec = new Specification<Module>() {
+
+            @Override
+            public Predicate toPredicate(Root<Module> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+                // TODO Auto-generated method stub
+                return cb.equal(root.get("state").as(Integer.class), 1);
+            }
+        };
+        List<Module> moduleList = moduleService.find(spec); //所有未停用的模块
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        //[{"id": "11","pId": "1","name": "随意勾选 1-1"}, {"id": "111","pId": "11","name": "随意勾选 1-1-1","checked": "true"}]
+
+        int size = moduleList.size();
+        for (Module module:moduleList) {
+            size--;
+            sb.append("{");
+            sb.append("\"id\": \"").append(module.getId()).append("\"");
+            sb.append(",\"pId\": \"").append(module.getParentId()).append("\"");
+            sb.append(",\"name\": \"").append(module.getName()).append("\"");
+            //是否当前角色拥有该模块
+            if(roleModules.contains(module)){
+                sb.append(",\"checked\": \"true\"");
+            }
+
+            sb.append("}");
+            if(size > 0){
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+
+        System.out.println("=========="+sb.toString());
+
+        //向前端写json字符串
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setCharacterEncoding("utf-8");
+        response.getWriter().write(sb.toString());
+	    return NONE;
+    }
+
+
+    //使用fastjson，返回前端ajax请求
+    @Action(value="roleAction_genzTreeNodes")
+    public String genzTreeNodes() throws Exception{
+        // 返回ajax请求后的json字符串满足ztree的数据
+
+        // 1。根据id获取角色对象
+        Role role = roleService.get(model.getId());
+        Set<Module> roleModules = role.getModules(); //用户所拥有的所有模块
+
+        // 2.查询所有的模块
+        Specification<Module> spec = new Specification<Module>() {
+
+            @Override
+            public Predicate toPredicate(Root<Module> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+                // TODO Auto-generated method stub
+                return cb.equal(root.get("state").as(Integer.class), 1);
+            }
+        };
+        List<Module> moduleList = moduleService.find(spec); //所有未停用的模块
+
+        List<Map<String,Object>> toJsonList = new ArrayList<>();
+        //[{"id": "11","pId": "1","name": "随意勾选 1-1"}, {"id": "111","pId": "11","name": "随意勾选 1-1-1","checked": "true"}]
+        for(Module m : moduleList){
+            Map<String,Object> jsonMap = new HashMap<>();
+            jsonMap.put("id",m.getId());
+            jsonMap.put("pId",m.getParentId());
+            jsonMap.put("name",m.getName());
+            if(roleModules.contains(m)){
+                jsonMap.put("checked",true);
+            }
+            toJsonList.add(jsonMap);
+        }
+
+        String jsonString = JSON.toJSONString(toJsonList);
+
+        System.out.println("=========="+jsonString);
+
+        //向前端写json字符串
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setCharacterEncoding("utf-8");
+        response.getWriter().write(jsonString);
+        return NONE;
+    }
+
+    @Action(value="roleAction_module")
+    public String module(){
+        Role role = roleService.get(model.getId());
+
+        Set<Module> modules = new HashSet<>();
+        String[] ids = moduleIds.split(",");
+        for(String id : ids){
+            modules.add(moduleService.get(id));
+        }
+
+        role.setModules(modules);
+
+        roleService.saveOrUpdate(role);
+
+        return "alist";
+    }
 }

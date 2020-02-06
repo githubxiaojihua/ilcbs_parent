@@ -2,8 +2,10 @@ package com.xiaojihua.web.action.sysadmin;
 
 import com.opensymphony.xwork2.ModelDriven;
 import com.xiaojihua.domain.Dept;
+import com.xiaojihua.domain.Role;
 import com.xiaojihua.domain.User;
 import com.xiaojihua.service.DeptService;
+import com.xiaojihua.service.RoleService;
 import com.xiaojihua.service.UserService;
 import com.xiaojihua.utils.Page;
 import com.xiaojihua.web.action.BaseAction;
@@ -18,7 +20,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Namespace("/sysadmin")
 @Result(name="alist",type="redirectAction",location="userAction_list")
@@ -29,6 +33,9 @@ public class UserAction extends BaseAction<User> implements ModelDriven<User> {
 
     @Autowired
     private DeptService deptService;
+
+    @Autowired
+    private RoleService roleService;
 
     private User user = new User();
     @Override
@@ -44,6 +51,16 @@ public class UserAction extends BaseAction<User> implements ModelDriven<User> {
 
     public void setPage(Page<User> page) {
         this.page = page;
+    }
+
+    private String[] roleIds;
+
+    public String[] getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String[] roleIds) {
+        this.roleIds = roleIds;
     }
 
     @Action(value="userAction_list",results={@Result(name="list",location="/WEB-INF/pages/sysadmin/user/jUserList.jsp")})
@@ -131,4 +148,37 @@ public class UserAction extends BaseAction<User> implements ModelDriven<User> {
         service.delete(ids);
         return "alist";
     }
+
+    @Action(value="userAction_torole",results={@Result(name="toRole",location="/WEB-INF/pages/sysadmin/user/jUserRole.jsp")})
+    public String toRole(){
+        User user = service.get(this.user.getId());
+        super.push(user);
+
+        Set<Role> roles = user.getRoles();
+        StringBuilder sb = new StringBuilder();
+        for(Role role : roles){
+            sb.append(role.getName()).append(",");
+        }
+        super.put("roleStr",sb);
+
+        List<Role> roleList = roleService.find(null);
+        super.put("roleList",roleList);
+
+        return "toRole";
+    }
+
+    @Action(value="userAction_role")
+    public String role(){
+        User user = service.get(this.user.getId());
+        Set<Role> roles = new HashSet<>();
+        for(String id : roleIds){
+            Role role = roleService.get(id);
+            roles.add(role);
+        }
+        user.setRoles(roles);
+        service.saveOrUpdate(user);
+        return "alist";
+    }
+
+
 }

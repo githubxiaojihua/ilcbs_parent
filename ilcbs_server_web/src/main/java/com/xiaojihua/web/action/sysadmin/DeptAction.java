@@ -5,6 +5,7 @@ import com.xiaojihua.domain.Dept;
 import com.xiaojihua.service.DeptService;
 import com.xiaojihua.utils.Page;
 import com.xiaojihua.web.action.BaseAction;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;

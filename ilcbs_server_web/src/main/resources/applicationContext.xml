@@ -110,5 +110,6 @@
 	<context:component-scan base-package="com.xiaojihua"></context:component-scan>
 		
 	<!--组装其它 配置文件-->
-	
+	<import resource="classpath*:applicationContext-shiro.xml"/>
+	<import resource="classpath*:applicationContext-mail.xml"/>
 </beans>

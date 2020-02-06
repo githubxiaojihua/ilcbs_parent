@@ -1,8 +1,10 @@
 package com.xiaojihua.web.action;
 
+import com.xiaojihua.domain.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.subject.Subject;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -56,9 +58,32 @@ public class LoginAction extends BaseAction {
 //			return SUCCESS;
 //		}
 //		return "login";
-		
-		
-		return SUCCESS;
+
+
+		if(UtilFuns.isEmpty(username)){
+			return "login";
+		}
+
+		Subject subject = SecurityUtils.getSubject();
+
+		// 组装token的时候，密码进行md5处理
+		// 这样就不用了设置密码比较器了，实际上是走的shior内部的默认密码比较器，只是进行简单的equales比较
+		// 另外还需要将配置文件中的密码比较器配置去掉
+		Md5Hash hash = new Md5Hash(password, username, 2);
+
+		UsernamePasswordToken token = new UsernamePasswordToken(username, hash.toString());
+
+		try {
+			subject.login(token);
+			User user = (User) subject.getPrincipal();
+			session.put(SysConstant.CURRENT_USER_INFO, user);
+			return SUCCESS;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			super.put("errorInfo", "您的用户名或密码错误"); //登录页面的错误信息提示
+			return "login";
+		}
 	}
 	
 	

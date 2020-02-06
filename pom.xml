@@ -124,6 +124,7 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- 里面包含spring操作javamail的相关API以及其他一些有用的API需要研究一下-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>

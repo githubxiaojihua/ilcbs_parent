@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+	http://www.springframework.org/schema/beans/spring-beans.xsd    
+	http://www.springframework.org/schema/aop    
+	http://www.springframework.org/schema/aop/spring-aop.xsd    
+	http://www.springframework.org/schema/tx    
+	http://www.springframework.org/schema/tx/spring-tx.xsd    
+	http://www.springframework.org/schema/context    
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 配置Spring整合shiro -->
+
+
+
+
+	<!-- 密码比较器类 如果在组成token处进行了相同的密码加密则可以不用自定义密码比较器，使用shiro提供的即可-->
+	<bean id="passwordMatcher" class="com.xiaojihua.web.action.shiro.PasswordMatcher" />
+
+
+	<!-- 编写realm类 -->
+	<bean id="authRealm" class="com.xiaojihua.web.action.shiro.AuthRealm">
+		<!-- 注入密码比较器对象  -->
+        <!-- 由于在组成token的时候已经设置了加密因此暂时不需要密码比较器-->
+		<!--<property name="credentialsMatcher" ref="passwordMatcher" />-->
+	</bean>
+
+	<!-- 配置安全管理器 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<!-- 自己编写一个realm域对象 -->
+		<property name="realm" ref="authRealm" />
+	</bean>
+
+	<!-- Spring框架需要整合shiro安全框架 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<!-- 注入安全管理器 -->
+		<property name="securityManager" ref="securityManager" />
+		<!-- 登录页面 -->
+		<property name="loginUrl" value="/index.jsp" />
+		<!-- 认证成功了，跳转的页面 <property name="successUrl" value=""/> -->
+		<!-- 没有权限的跳转页面 -->
+		<property name="unauthorizedUrl" value="/index2.jsp" />
+		<!-- 定义访问的规则 -->
+		<property name="filterChainDefinitions">
+			<!-- /**代表下面的多级目录也过滤 -->
+			<value>
+				/index.jsp* = anon
+				/home* = anon
+				/sysadmin/login/login.jsp* = anon
+				/sysadmin/login/loginAction_logout* = anon
+				/login* = anon
+				/logout* = anon
+				/components/** = anon
+				/css/** = anon
+				/img/** = anon
+				/js/** = anon
+				/plugins/** = anon
+				/images/** = anon
+				/js/** = anon
+				/make/** = anon
+				/skin/** = anon
+				/stat/** = anon
+				/ufiles/** = anon
+				/validator/** = anon
+				/resource/** = anon
+                <!-- 授权过滤器连的使用，目前为止虽然使用系统的时候需要登录，并且在jsp页面使用了
+                     shiro标签对页面显示进行了控制但是如果直接在浏览器上输入action的地址，还是
+                     照样能进入到不该进入到的ACTION页面。比如：
+                     用lisi  123456进行登录，在首页是没有系统管理相关功能的，但是如果在浏览器
+                     中直接键入：http://localhost:8080/ilcbs/sysadmin/deptAction_list
+                     还是可以进入到看不见的ACTION中的。
+                     这时候就需要进行过滤器链的权限过滤
+                     使用perms["权限字符串"]
+                     另外注意一点就是需要一个一个的配置
+                     相关ACTION都要配置上否则就会有漏网之鱼
+                 -->
+                /sysadmin/deptAction* = perms["系统管理"]
+				/** = authc
+				/*.* = authc
+			</value>
+		</property>
+	</bean>
+
+    <!-- 要是用shiro的注解那么必须有下面这三个类 -->
+	<!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+	<!-- 生成代理，通过代理进行控制 -->
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+		depends-on="lifecycleBeanPostProcessor">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+
+	<!-- 安全管理器 -->
+	<bean
+		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager" />
+	</bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
