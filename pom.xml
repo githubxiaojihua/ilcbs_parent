@@ -20,6 +20,7 @@
         <module>ilcbs_client_service</module>
         <module>ilcbs_client_web</module>
         <module>ilcbs_jms</module>
+        <module>ilcbs_server_client</module>
     </modules>
 
     <packaging>pom</packaging>

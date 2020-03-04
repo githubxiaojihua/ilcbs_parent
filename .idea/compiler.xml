@@ -14,6 +14,7 @@
         <module name="ilcbs_client_web" />
         <module name="ilcbs_exception" />
         <module name="ilcbs_jms" />
+        <module name="ilcbs_server_client" />
         <module name="ilcbs_server_dao" />
         <module name="ilcbs_server_domain" />
         <module name="ilcbs_server_service" />

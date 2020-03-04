@@ -9,154 +9,64 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath }/components/newAmcharts/style.css" type="text/css">
         <script src="${pageContext.request.contextPath }/components/newAmcharts/amcharts/amcharts.js" type="text/javascript"></script>
         <script src="${pageContext.request.contextPath }/components/newAmcharts/amcharts/serial.js" type="text/javascript"></script>
+        <script src="${pageContext.request.contextPath }/components/jquery-ui/jquery-1.2.6.js" type="text/javascript"></script>
 
         <script>
             var chart;
 
-            /* var chartData = [
-                {
-                    "country": "USA",
-                    "visits": 4025,
-                    "color": "#FF0F00"
-                },
-                {
-                    "country": "China",
-                    "visits": 1882,
-                    "color": "#FF6600"
-                },
-                {
-                    "country": "Japan",
-                    "visits": 1809,
-                    "color": "#FF9E01"
-                },
-                {
-                    "country": "Germany",
-                    "visits": 1322,
-                    "color": "#FCD202"
-                },
-                {
-                    "country": "UK",
-                    "visits": 1122,
-                    "color": "#F8FF01"
-                },
-                {
-                    "country": "France",
-                    "visits": 1114,
-                    "color": "#B0DE09"
-                },
-                {
-                    "country": "India",
-                    "visits": 984,
-                    "color": "#04D215"
-                },
-                {
-                    "country": "Spain",
-                    "visits": 711,
-                    "color": "#0D8ECF"
-                },
-                {
-                    "country": "Netherlands",
-                    "visits": 665,
-                    "color": "#0D52D1"
-                },
-                {
-                    "country": "Russia",
-                    "visits": 580,
-                    "color": "#2A0CD0"
-                },
-                {
-                    "country": "South Korea",
-                    "visits": 443,
-                    "color": "#8A0CCF"
-                },
-                {
-                    "country": "Canada",
-                    "visits": 441,
-                    "color": "#CD0D74"
-                },
-                {
-                    "country": "Brazil",
-                    "visits": 395,
-                    "color": "#754DEB"
-                },
-                {
-                    "country": "Italy",
-                    "visits": 386,
-                    "color": "#DDDDDD"
-                },
-                {
-                    "country": "Australia",
-                    "visits": 384,
-                    "color": "#999999"
-                },
-                {
-                    "country": "Taiwan",
-                    "visits": 338,
-                    "color": "#333333"
-                },
-                {
-                    "country": "Poland",
-                    "visits": 328,
-                    "color": "#000000"
-                }
-            ]; */
-            var chartData = ${myjson};
-
             AmCharts.ready(function () {
-                // SERIAL CHART
-                chart = new AmCharts.AmSerialChart();
-                chart.dataProvider = chartData;
-                chart.categoryField = "factoryName";//======================================
-                // the following two lines makes chart 3D
-                chart.depth3D = 20;
-                chart.angle = 30;
+                $.ajax({
+                    url:"statChartAction_getProductsaleData",
+                    dataType:"json",
+                    type:"get",
+                    success:function(value){
+                        // SERIAL CHART
+                        chart = new AmCharts.AmSerialChart();
+                        chart.dataProvider = value;
+                        chart.categoryField = "productno";//======================================
+                        // the following two lines makes chart 3D
+                        chart.depth3D = 20;
+                        chart.angle = 30;
 
-                // AXES
-                // category
-                 var categoryAxis = chart.categoryAxis;
-                //categoryAxis.labelRotation = 20;
-                categoryAxis.dashLength = 5;
-                categoryAxis.gridPosition = "start"; 
-                
-               /*  var categoryAxis = chart.categoryAxis;
-                categoryAxis.gridAlpha = 0.2;
-                categoryAxis.gridPosition = "start";
-                categoryAxis.gridColor = "#FFFFFF";
-                categoryAxis.axisColor = "#FFFFFF";
-                categoryAxis.axisAlpha = 0.5;
-                categoryAxis.dashLength = 5; */
+                        // AXES
+                        // category
+                        var categoryAxis = chart.categoryAxis;
+                        //categoryAxis.labelRotation = 20;
+                        categoryAxis.dashLength = 5;
+                        categoryAxis.gridPosition = "start";
 
-                
-                
+                        // value
+                        var valueAxis = new AmCharts.ValueAxis();
+                        valueAxis.title = "产品销售排行";
+                        valueAxis.dashLength = 5;
+                        chart.addValueAxis(valueAxis);
 
-                // value
-                var valueAxis = new AmCharts.ValueAxis();
-                valueAxis.title = "销售额";
-                valueAxis.dashLength = 5;
-                chart.addValueAxis(valueAxis);
+                        // GRAPH
+                        var graph = new AmCharts.AmGraph();
+                        graph.valueField = "amount";//================================================
+                        graph.colorField = "color";
+                        graph.balloonText = "<span style='font-size:18px'>[[category]]: <b>[[value]]</b></span>";
+                        graph.type = "column";
+                        graph.lineAlpha = 0;
+                        graph.fillAlphas = 1;
+                        chart.addGraph(graph);
 
-                // GRAPH
-                var graph = new AmCharts.AmGraph();
-                graph.valueField = "saleAmount";//================================================
-                graph.colorField = "color";
-                graph.balloonText = "<span style='font-size:18px'>[[category]]: <b>[[value]]</b></span>";
-                graph.type = "column";
-                graph.lineAlpha = 0;
-                graph.fillAlphas = 1;
-                chart.addGraph(graph);
+                        // CURSOR
+                        var chartCursor = new AmCharts.ChartCursor();
+                        chartCursor.cursorAlpha = 0;
+                        chartCursor.zoomable = false;
+                        chartCursor.categoryBalloonEnabled = false;
+                        chart.addChartCursor(chartCursor);
 
-                // CURSOR
-                var chartCursor = new AmCharts.ChartCursor();
-                chartCursor.cursorAlpha = 0;
-                chartCursor.zoomable = false;
-                chartCursor.categoryBalloonEnabled = false;
-                chart.addChartCursor(chartCursor);
-
-                chart.creditsPosition = "top-right";
+                        chart.creditsPosition = "top-right";
 
 
-                // WRITE
-                chart.write("chartdiv");
+                        // WRITE
+                        chart.write("chartdiv");
+
+                    }
+                });
+
             });
         </script>
     </head>

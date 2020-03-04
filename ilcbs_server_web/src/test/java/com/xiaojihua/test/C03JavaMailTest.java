@@ -141,6 +141,10 @@ public class C03JavaMailTest {
 
     }
 
+    /**
+     * 使用邮件工具类发送邮件
+     * @throws Exception
+     */
     @Test
     public void test3() throws Exception {
         MailUtil.sendMsg("2542213767@qq.com","test","tesss");

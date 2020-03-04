@@ -29,4 +29,6 @@ public interface UserService {
     //批量删除
     public  void delete(String[] ids);
 
+    public List<Object[]> getLoginData();
+
 }

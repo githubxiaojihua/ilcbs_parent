@@ -1023,7 +1023,8 @@ import java.util.Date;
     try{
         SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         s = dformat.format(date);
-        s = String.valueOf(StrToTimestamp(s, pattern));
+        Timestamp timestamp = StrToTimestamp(s, pattern);
+        s = String.valueOf(timestamp);
         s = s.substring(0,pattern.length());
     }catch(Exception e){ }
     return s;

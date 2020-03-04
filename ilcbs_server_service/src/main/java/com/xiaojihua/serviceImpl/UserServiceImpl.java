@@ -117,4 +117,10 @@ public class UserServiceImpl implements UserService {
             dao.delete(id);
         }
     }
+
+    @Override
+    public List<Object[]> getLoginData() {
+        // TODO Auto-generated method stub
+        return dao.getLoginData();
+    }
 }

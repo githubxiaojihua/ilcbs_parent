@@ -35,6 +35,12 @@
             <artifactId>ilcbs_server_service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!-- 引入海关webservice 客户端的模块 -->
+        <dependency>
+            <groupId>com.xiaojihua</groupId>
+            <artifactId>ilcbs_server_client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

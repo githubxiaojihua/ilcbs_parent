@@ -71,8 +71,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
 	 * 
 	 * 将一个对象放入栈顶
 	 */
-	public void push(Object obj){
-		ActionContext.getContext().getValueStack().push(obj);
+	public void push(Object obj){ActionContext.getContext().getValueStack().push(obj);
+
 	}
 	
 	/**
