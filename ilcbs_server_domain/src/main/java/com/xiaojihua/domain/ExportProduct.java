@@ -32,6 +32,7 @@ public class ExportProduct implements Serializable{
 	@Column(name="EXPORT_PRODUCT_ID")
 	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid",strategy="uuid")
+	@JSONField(name="exportProductId")
 	private String id;	  	
 	
 	@ManyToOne

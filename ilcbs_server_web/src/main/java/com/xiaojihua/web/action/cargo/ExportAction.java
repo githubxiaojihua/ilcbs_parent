@@ -344,26 +344,81 @@ public class ExportAction extends BaseAction implements ModelDriven<Export> {
     }
 
 
+    /**
+     * 使用一个FastJson的注解可以将本地Export类转换成海关系统中要求的JSON格式
+     * @return
+     * @throws Exception_Exception
+     */
     @Action(value="exportAction_exportE")
     public String exportE() throws Exception_Exception {
         // 出口报运单对象
         Export export = exportService.get(this.export.getId());
+
+        String jsonString = JSON.toJSONString(export);
+        System.out.println("=======" + jsonString);
+        //调用海关webservice接口获取海关处理后返回的数据
+        /**
+         * 这里调用的是通过ilcbs_server_client模块来调用海关jax_ws风格的系统
+         * 并返回其处理完毕后的json字符串
+         */
+        //通过fastjson将对象转成json字符串，由于做了@JSONField注解对应，因此可以直接使用
+        String exportE = epService.exportE(jsonString);
+
+        System.out.println("从海关报运系统中获取到的数据：" + exportE);
+
+        /**
+         * 将海关返回的json字符串通过fastjson处理成HashMap，因为没有具体的类来做
+         * 接收。
+         */
+        Export returnExport = JSON.parseObject(exportE,Export.class);
+
+        // 根据返回内容更新本地报运单
+        Export exportDb = exportService.get(returnExport.getId());
+        exportDb.setState(returnExport.getState());
+        exportDb.setRemark(returnExport.getRemark());
+        exportService.saveOrUpdate(exportDb); //修改数据后保存数据库
+
+        Set<ExportProduct> exportProducts = returnExport.getExportProducts();
+
+        for (ExportProduct ep : exportProducts) {
+            // 根据海关返回的货物id查询当前系统的货物对象，进行tax赋值
+            ExportProduct epDb = exportProductService.get(ep.getId());
+            epDb.setTax(ep.getTax());
+
+            exportProductService.saveOrUpdate(epDb);
+        }
+
+        return "alist";
+    }
+
+    /**
+     * 原始的调用jax_ws风格海关报运webseervice的方法，
+     * 由于本地的报运单对象中的属性名称，与海关接口中要求的json字符串中属性名称
+     * 不一致，因此不能直接将本地export对象转换成json字符串，传递给接口，
+     * 需要构造一个hashMap来进行转换
+     * @return
+     * @throws Exception_Exception
+     */
+    @Action(value="exportAction_old_exportE")
+    public String old_exportE() throws Exception_Exception {
+        // 出口报运单对象
+        Export export = exportService.get(this.export.getId());
         /**
          * {
-             exportId:"",
-             state:"",
-             remark:"",
-             products:[
-                 {
-                     exportProductId:"",
-                     tax:""
-                 },
-                 {
-                     exportProductId:"",
-                     tax:""
-                 }
-             ]
-            }
+         exportId:"",
+         state:"",
+         remark:"",
+         products:[
+         {
+         exportProductId:"",
+         tax:""
+         },
+         {
+         exportProductId:"",
+         tax:""
+         }
+         ]
+         }
          *
          */
         HashMap exportMap = new HashMap();

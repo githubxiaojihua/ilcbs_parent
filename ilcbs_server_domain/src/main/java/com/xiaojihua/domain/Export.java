@@ -33,11 +33,13 @@ public class Export implements Serializable{
 	@Column(name="EXPORT_ID")
 	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid",strategy="uuid")
+	@JSONField(name="exportId")//这里使用fastjson注解表示在转换的时候使用的名称
 	private String id;	  	
 	
 	
 	@OneToMany(mappedBy="export",cascade=CascadeType.ALL)
 	@OrderBy("ORDER_NO")
+	@JSONField(name="products")//别忘记exportProduct中的id属性也应该转换
 	private Set<ExportProduct> exportProducts;	//报运下的货物 一对多
 	
 	@Column(name="INPUT_DATE")
