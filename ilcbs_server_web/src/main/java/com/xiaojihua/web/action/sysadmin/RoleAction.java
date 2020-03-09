@@ -14,6 +14,7 @@ import com.xiaojihua.domain.Role;
 import com.xiaojihua.service.ModuleService;
 import com.xiaojihua.service.RoleService;
 import com.xiaojihua.utils.Page;
+import com.xiaojihua.utils.UtilFuns;
 import com.xiaojihua.web.action.BaseAction;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.struts2.ServletActionContext;
@@ -25,6 +26,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.opensymphony.xwork2.ModelDriven;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 @Namespace("/sysadmin")
 @Result(name = "alist", type = "redirectAction", location = "roleAction_list")
@@ -35,6 +38,9 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 
 	@Autowired
 	private ModuleService moduleService;
+
+	@Autowired
+	private JedisPool pool;
 
 	private Role model = new Role();
 
@@ -242,40 +248,53 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 
         // 1。根据id获取角色对象
         Role role = roleService.get(model.getId());
-        Set<Module> roleModules = role.getModules(); //用户所拥有的所有模块
 
-        // 2.查询所有的模块
-        Specification<Module> spec = new Specification<Module>() {
+        // 从jedis中取数据
+		Jedis jedis = pool.getResource();
+		String returnStr = jedis.get("genzTreeNodes" + role.getId());
+		if(UtilFuns.isEmpty(returnStr)){
+			Set<Module> roleModules = role.getModules(); //用户所拥有的所有模块
 
-            @Override
-            public Predicate toPredicate(Root<Module> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-                // TODO Auto-generated method stub
-                return cb.equal(root.get("state").as(Integer.class), 1);
-            }
-        };
-        List<Module> moduleList = moduleService.find(spec); //所有未停用的模块
+			// 2.查询所有的模块
+			Specification<Module> spec = new Specification<Module>() {
 
-        List<Map<String,Object>> toJsonList = new ArrayList<>();
-        //[{"id": "11","pId": "1","name": "随意勾选 1-1"}, {"id": "111","pId": "11","name": "随意勾选 1-1-1","checked": "true"}]
-        for(Module m : moduleList){
-            Map<String,Object> jsonMap = new HashMap<>();
-            jsonMap.put("id",m.getId());
-            jsonMap.put("pId",m.getParentId());
-            jsonMap.put("name",m.getName());
-            if(roleModules.contains(m)){
-                jsonMap.put("checked",true);
-            }
-            toJsonList.add(jsonMap);
-        }
+				@Override
+				public Predicate toPredicate(Root<Module> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+					// TODO Auto-generated method stub
+					return cb.equal(root.get("state").as(Integer.class), 1);
+				}
+			};
+			List<Module> moduleList = moduleService.find(spec); //所有未停用的模块
 
-        String jsonString = JSON.toJSONString(toJsonList);
+			List<Map<String,Object>> toJsonList = new ArrayList<>();
+			//[{"id": "11","pId": "1","name": "随意勾选 1-1"}, {"id": "111","pId": "11","name": "随意勾选 1-1-1","checked": "true"}]
+			for(Module m : moduleList){
+				Map<String,Object> jsonMap = new HashMap<>();
+				jsonMap.put("id",m.getId());
+				jsonMap.put("pId",m.getParentId());
+				jsonMap.put("name",m.getName());
+				if(roleModules.contains(m)){
+					jsonMap.put("checked",true);
+				}
+				toJsonList.add(jsonMap);
+			}
 
-        System.out.println("=========="+jsonString);
+			returnStr = JSON.toJSONString(toJsonList);
+
+			jedis.set("genzTreeNodes" + role.getId(),returnStr);
+			System.out.println("从数据库中获取");
+		}else{
+			System.out.println("从redis中获取");
+		}
+
+
+
+        System.out.println("=========="+returnStr);
 
         //向前端写json字符串
         HttpServletResponse response = ServletActionContext.getResponse();
         response.setCharacterEncoding("utf-8");
-        response.getWriter().write(jsonString);
+        response.getWriter().write(returnStr);
         return NONE;
     }
 
@@ -293,6 +312,8 @@ public class RoleAction extends BaseAction implements ModelDriven<Role> {
 
         roleService.saveOrUpdate(role);
 
+        //更新角色模块以后，需要更新redis中的数据，最简单的方法是删除
+		pool.getResource().del("genzTreeNodes" + role.getId());
         return "alist";
     }
 }

@@ -115,4 +115,5 @@
 	<import resource="classpath*:applicationContext-job.xml"/>
 	<!-- 加入webservice相关配置文件 -->
 	<import resource="classpath*:applicationContext-ws.xml"/>
+	<import resource="classpath*:applicationContext-redis.xml"/>
 </beans>

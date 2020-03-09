@@ -12,23 +12,27 @@ import com.xiaojihua.service.ExportProductService;
 import com.xiaojihua.service.ExportService;
 import com.xiaojihua.utils.Page;
 import com.xiaojihua.utils.UtilFuns;
+import com.xiaojihua.vo.ExportProductResult;
+import com.xiaojihua.vo.ExportProductVo;
+import com.xiaojihua.vo.ExportResult;
+import com.xiaojihua.vo.ExportVo;
 import com.xiaojihua.web.action.BaseAction;
+import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.MediaType;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Result(name="alist",location="exportAction_list",type="redirectAction")
 public class ExportAction extends BaseAction implements ModelDriven<Export> {
@@ -344,13 +348,58 @@ public class ExportAction extends BaseAction implements ModelDriven<Export> {
     }
 
 
+    @Action(value="exportAction_exportE")
+    public String exportE() throws Exception_Exception {
+        WebClient client = WebClient.create("http://localhost:8090/jkexportrs/ws/export/user");
+        client.type(javax.ws.rs.core.MediaType.APPLICATION_JSON);
+        // 出口报运单对象
+        Export export = exportService.get(this.export.getId());
+        ExportVo exportVo = new ExportVo();
+        // 拷贝报运单对象
+        BeanUtils.copyProperties(export,exportVo);
+        exportVo.setExportId(export.getId());
+        // 拷贝报运单中的产品
+        Set<ExportProduct> exportProducts = export.getExportProducts();
+        HashSet<ExportProductVo> exportProductsVo = new HashSet<>();
+        for(ExportProduct ep : exportProducts){
+            ExportProductVo exportProductVo = new ExportProductVo();
+            BeanUtils.copyProperties(ep,exportProductVo);
+            exportProductVo.setExportProductId(ep.getId());
+            exportProductVo.setExportId(export.getId() );
+            exportProductsVo.add(exportProductVo);
+        }
+        exportVo.setProducts(exportProductsVo);
+        //提交数据
+        client.post(exportVo);
+
+
+        WebClient returnClient = WebClient.create("http://localhost:8090/jkexportrs/ws/export/user/" + exportVo.getId());
+        returnClient.accept(javax.ws.rs.core.MediaType.APPLICATION_JSON);
+        ExportResult exportResult = returnClient.get(ExportResult.class);
+
+        //根据返回的id更新本地对象
+        Export exportDb = exportService.get(exportResult.getExportId());
+        exportDb.setState(exportResult.getState());
+        exportDb.setRemark(exportResult.getRemark());
+        exportService.saveOrUpdate(exportDb);
+
+        Set<ExportProductResult> products = exportResult.getProducts();
+        for(ExportProductResult epResult : products){
+            ExportProduct exportProduct = exportProductService.get(epResult.getExportProductId());
+            exportProduct.setTax(epResult.getTax());
+            exportProductService.saveOrUpdate(exportProduct);
+        }
+        return "alist";
+    }
+
     /**
      * 使用一个FastJson的注解可以将本地Export类转换成海关系统中要求的JSON格式
+     * 仍然是jax_ws风格的
      * @return
      * @throws Exception_Exception
      */
-    @Action(value="exportAction_exportE")
-    public String exportE() throws Exception_Exception {
+    @Action(value="exportAction_fastjson_exportE")
+    public String fastjson_exportE() throws Exception_Exception {
         // 出口报运单对象
         Export export = exportService.get(this.export.getId());
 
