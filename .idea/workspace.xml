@@ -32,15 +32,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="C09ActiveMqTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="C09ActiveMqTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+            <state relative-caret-position="542">
+              <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3043#3243#0" expanded="true" />
-                <element signature="e#3242#3243#0" expanded="true" />
+                <element signature="e#3099#3533#0" expanded="true" />
+                <element signature="e#3532#3533#0" expanded="true" />
+                <element signature="e#5778#6281#0" expanded="true" />
+                <element signature="e#6280#6281#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-mq.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C10SpringActiveMqTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#905#1099#0" expanded="true" />
+                <element signature="e#1098#1099#0" expanded="true" />
+                <element signature="e#1517#1938#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicListener2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicListener1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-mq-consumer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueueListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C11SpringActiveMqListenerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,8 +143,8 @@
       <find>quartz</find>
       <find>HibernateSupport</find>
       <find>.class</find>
-      <find />
-      <find />
+      <find>new String[]</find>
+      <find>new String[</find>
       <find>typedquery</find>
       <find>createquery</find>
       <find>statChartAction_getFactorysaleData</find>
@@ -105,12 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ExportDao.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ExportServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/cargo/ExportAction.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ContractProductDao.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/BaseAction.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/webapp/js/tabledo.js" />
         <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/service/ExportProductService.java" />
         <option value="$PROJECT_DIR$/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ExportProductDao.java" />
         <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ExportProductServiceImpl.java" />
@@ -155,7 +225,13 @@
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C07SpringDataRedisTest.java" />
         <option value="$PROJECT_DIR$/ilcbs_cache/src/main/resources/applicationContext-cache.xml" />
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C08FastJsonTest.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java" />
         <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml" />
       </list>
     </option>
   </component>
@@ -211,8 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +305,48 @@
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
               <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
+              <item name="jms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -263,14 +380,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="上&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/..//////////jk_export" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/..///////////jk_export" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -279,12 +397,8 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\ilcbs_parent\ilcbs_cache\src\main\resources" />
-      <recent name="I:\ilcbs_parent\ilcbs_server_domain\src\main\java\com\xiaojihua\vo" />
-      <recent name="I:\ilcbs_parent\ilcbs_utils\src\main\java\com\xiaojihua\utils" />
-      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\resources" />
-      <recent name="I:\ilcbs_parent\ilcbs_server_service\src\main\java\com\xiaojihua\serviceImpl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xiaojihua.test" />
@@ -293,8 +407,12 @@
       <recent name="com.xiaojihua.web.action.cargo" />
       <recent name="com.xiaojihua.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\webapp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\java\com\xiaojihua\jms" />
+      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\resources" />
+      <recent name="I:\ilcbs_parent\ilcbs_cache\src\main\resources" />
+      <recent name="I:\ilcbs_parent\ilcbs_server_domain\src\main\java\com\xiaojihua\vo" />
+      <recent name="I:\ilcbs_parent\ilcbs_utils\src\main\java\com\xiaojihua\utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,11 +427,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.C09ActiveMqTest.test1">
+  <component name="RunManager" selected="JUnit.C10SpringActiveMqTest.testTopicSend">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="C08FastJsonTest.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="C10SpringActiveMqTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ilcbs_server_web" />
       <extension name="coverage">
         <pattern>
@@ -324,53 +442,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C08FastJsonTest" />
-      <option name="METHOD_NAME" value="testList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="C08FastJsonTest.testList1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ilcbs_server_web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaojihua.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C08FastJsonTest" />
-      <option name="METHOD_NAME" value="testList1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="C09ActiveMqTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ilcbs_server_web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaojihua.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C09ActiveMqTest" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C10SpringActiveMqTest" />
       <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -382,7 +454,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="C09ActiveMqTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="C10SpringActiveMqTest.testQueueReceive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ilcbs_server_web" />
       <extension name="coverage">
         <pattern>
@@ -393,8 +465,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C09ActiveMqTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C10SpringActiveMqTest" />
+      <option name="METHOD_NAME" value="testQueueReceive" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -405,7 +477,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="C09ActiveMqTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="C10SpringActiveMqTest.testTopicReceive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ilcbs_server_web" />
       <extension name="coverage">
         <pattern>
@@ -416,8 +488,54 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C09ActiveMqTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C10SpringActiveMqTest" />
+      <option name="METHOD_NAME" value="testTopicReceive" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="C10SpringActiveMqTest.testTopicSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ilcbs_server_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaojihua.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C10SpringActiveMqTest" />
+      <option name="METHOD_NAME" value="testTopicSend" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="C11SpringActiveMqListenerTest.testRun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ilcbs_server_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaojihua.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.xiaojihua.test" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaojihua.test.C11SpringActiveMqListenerTest" />
+      <option name="METHOD_NAME" value="testRun" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -540,19 +658,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.ilcbstomcat" />
-      <item itemvalue="JUnit.C08FastJsonTest.testList" />
-      <item itemvalue="JUnit.C08FastJsonTest.testList1" />
-      <item itemvalue="JUnit.C09ActiveMqTest.test1" />
-      <item itemvalue="JUnit.C09ActiveMqTest.test2" />
-      <item itemvalue="JUnit.C09ActiveMqTest.test3" />
+      <item itemvalue="JUnit.C10SpringActiveMqTest.test1" />
+      <item itemvalue="JUnit.C10SpringActiveMqTest.testQueueReceive" />
+      <item itemvalue="JUnit.C11SpringActiveMqListenerTest.testRun" />
+      <item itemvalue="JUnit.C10SpringActiveMqTest.testTopicSend" />
+      <item itemvalue="JUnit.C10SpringActiveMqTest.testTopicReceive" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.C09ActiveMqTest.test1" />
-        <item itemvalue="JUnit.C09ActiveMqTest.test3" />
-        <item itemvalue="JUnit.C09ActiveMqTest.test2" />
-        <item itemvalue="JUnit.C08FastJsonTest.testList1" />
-        <item itemvalue="JUnit.C08FastJsonTest.testList" />
+        <item itemvalue="JUnit.C10SpringActiveMqTest.testTopicSend" />
+        <item itemvalue="JUnit.C11SpringActiveMqListenerTest.testRun" />
+        <item itemvalue="JUnit.C10SpringActiveMqTest.testTopicReceive" />
+        <item itemvalue="JUnit.C10SpringActiveMqTest.test1" />
+        <item itemvalue="JUnit.C10SpringActiveMqTest.testQueueReceive" />
       </list>
     </recent_temporary>
   </component>
@@ -616,44 +734,45 @@
       <workItem from="1583466050170" duration="3659000" />
       <workItem from="1583487193848" duration="1055000" />
       <workItem from="1583567043007" duration="14865000" />
-      <workItem from="1583745591617" duration="2060000" />
+      <workItem from="1583745591617" duration="2233000" />
+      <workItem from="1583818301505" duration="4104000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C08FastJsonTest_testList1 - 2020.03.07 at 21h 48m 55s.xml">
-      <configuration name="C08FastJsonTest.testList1" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicSend - 2020.03.10 at 14h 46m 44s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicSend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C08FastJsonTest_testList1 - 2020.03.07 at 21h 49m 30s.xml">
-      <configuration name="C08FastJsonTest.testList1" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicReceive - 2020.03.10 at 14h 47m 28s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicReceive" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C08FastJsonTest_testList1 - 2020.03.07 at 21h 52m 35s.xml">
-      <configuration name="C08FastJsonTest.testList1" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicSend - 2020.03.10 at 14h 47m 43s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicSend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test1 - 2020.03.09 at 17h 36m 34s.xml">
-      <configuration name="C09ActiveMqTest.test1" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicReceive - 2020.03.10 at 14h 47m 43s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicReceive" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test2 - 2020.03.09 at 17h 43m 42s.xml">
-      <configuration name="C09ActiveMqTest.test2" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicSend - 2020.03.10 at 14h 49m 12s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicSend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test2 - 2020.03.09 at 17h 43m 57s.xml">
-      <configuration name="C09ActiveMqTest.test2" configurationId="JUnit" />
+    <history-entry file="C11SpringActiveMqListenerTest_testRun - 2020.03.10 at 14h 50m 29s.xml">
+      <configuration name="C11SpringActiveMqListenerTest.testRun" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test2 - 2020.03.09 at 17h 44m 22s.xml">
-      <configuration name="C09ActiveMqTest.test2" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicSend - 2020.03.10 at 14h 50m 59s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicSend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test2 - 2020.03.09 at 17h 47m 00s.xml">
-      <configuration name="C09ActiveMqTest.test2" configurationId="JUnit" />
+    <history-entry file="C11SpringActiveMqListenerTest_testRun - 2020.03.10 at 14h 51m 20s.xml">
+      <configuration name="C11SpringActiveMqListenerTest.testRun" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test1 - 2020.03.09 at 17h 47m 25s.xml">
-      <configuration name="C09ActiveMqTest.test1" configurationId="JUnit" />
+    <history-entry file="C10SpringActiveMqTest_testTopicSend - 2020.03.10 at 14h 52m 05s.xml">
+      <configuration name="C10SpringActiveMqTest.testTopicSend" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="C09ActiveMqTest_test2 - 2020.03.09 at 17h 47m 40s.xml">
-      <configuration name="C09ActiveMqTest.test2" configurationId="JUnit" />
+    <history-entry file="C11SpringActiveMqListenerTest_testRun - 2020.03.10 at 14h 52m 43s.xml">
+      <configuration name="C11SpringActiveMqListenerTest.testRun" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267151000" />
+    <option name="totallyTimeSpent" value="271428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,7 +788,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067025" side_tool="true" weight="0.329429" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5013405" side_tool="true" weight="0.329429" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
@@ -688,10 +807,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.329429" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.27525622" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.39824304" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.329429" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.59210527" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.21849866" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5906433" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.22117962" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
       <window_info id="Web" order="6" sideWeight="0.50073206" side_tool="true" weight="0.22587131" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -764,55 +883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/service/ExportProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ExportProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ExportProductServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C04SpirngJavaMailTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C03JavaMailTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="85" column="14" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_utils/src/main/java/com/xiaojihua/utils/MailUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ContractDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-job.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -1040,10 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1126,12 +1192,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+        <state relative-caret-position="542">
+          <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3043#3243#0" expanded="true" />
-            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3099#3533#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#5778#6281#0" expanded="true" />
+            <element signature="e#6280#6281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#905#1099#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+            <element signature="e#1517#1938#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
           </folding>
         </state>
       </provider>

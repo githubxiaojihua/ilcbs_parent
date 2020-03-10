@@ -113,4 +113,90 @@ public class C09ActiveMqTest {
         //为了保证监听器一直开着，所以做如下设置。
         while(true);
     }
+
+
+    /**
+     * 操作TOPIC
+     * 使用JMS原生API编写测试类，向消息中间件写入消息。
+     * 消息生产者
+     *
+     * 基于topic的生产者和消费者，需要消费者先启动
+     * 然后再启动生产者，这样才能收到消息
+     */
+    @Test
+    public void test4() throws JMSException {
+        //1、创建工厂
+        ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
+        //2、创建并开启链接
+        Connection connection = factory.createConnection();
+        connection.start();
+        //3、创建session
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        //4、创建topic
+        Topic xiaojihuaTopic = session.createTopic("xiaojihuaTopic");
+        //5、创建消息生产者
+        MessageProducer producer = session.createProducer(xiaojihuaTopic);
+        //6、发送10条消息
+        for(int i=0; i<10; i++){
+            //发送一个mapMassage
+            MapMessage mapMessage = session.createMapMessage();
+            mapMessage.setString("username","zhangsan");
+            mapMessage.setString("password","123456");
+            producer.send(mapMessage);
+        }
+        //7、关闭链接
+        session.close();
+        connection.close();
+    }
+
+    /**
+     * 操作Topic
+     * 手动recive
+     */
+    @Test
+    public void test5() throws JMSException {
+        ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
+        Connection connection = factory.createConnection();
+        connection.start();
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        Topic xiaojihuaTopic = session.createTopic("xiaojihuaTopic");
+        MessageConsumer consumer = session.createConsumer(xiaojihuaTopic);
+        MapMessage receive = (MapMessage)consumer.receive();
+        System.out.println(receive.getString("username"));
+        session.close();
+        connection.close();
+    }
+
+    /**
+     * 操作Topic
+     * 使用监听器接收信息
+     * 一条信息可以被多个消费者消费
+     * @throws JMSException
+     */
+    @Test
+    public void test6() throws JMSException{
+        ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
+        Connection connection = factory.createConnection();
+        connection.start();
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        Topic topic = session.createTopic("itcast297_topic");
+        MessageConsumer consumer = session.createConsumer(topic);
+        consumer.setMessageListener(new MessageListener() {
+
+            @Override
+            public void onMessage(Message arg0) {
+                // TODO Auto-generated method stub
+                try {
+                    MapMessage message = (MapMessage) arg0;
+                    System.out.println("Listener1=====用户名是："+message.getString("username"));
+                } catch (JMSException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        while(true);
+    }
+
 }
