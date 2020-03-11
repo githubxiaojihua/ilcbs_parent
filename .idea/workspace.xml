@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ilcbs_server_web:war exploded" />
+      <artifact name="ilcbs_jms:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -32,92 +32,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="C09ActiveMqTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3099#3533#0" expanded="true" />
-                <element signature="e#3532#3533#0" expanded="true" />
-                <element signature="e#5778#6281#0" expanded="true" />
-                <element signature="e#6280#6281#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="404">
+              <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="applicationContext-mq.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq.xml">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext-mq.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="302">
+              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C10SpringActiveMqTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java">
+      <file leaf-file-name="BaseAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/java/cn/itcast/client/action/BaseAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+            <state relative-caret-position="-310">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/java/cn/itcast/client/action/UserAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="138" column="8" lean-forward="true" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#905#1099#0" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1517#1938#0" expanded="true" />
-                <element signature="e#1937#1938#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicListener2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicListener1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener1.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="443">
+              <caret line="430" column="21" selection-start-line="430" selection-start-column="21" selection-end-line="430" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueueListener.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/java/cn/itcast/jms/QueueListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="applicationContext-mq-consumer.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/resources/applicationContext-mq-consumer.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="470">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueueListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java">
+      <file leaf-file-name="applicationContext-cache.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/resources/applicationContext-cache.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-cache.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext-cache.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C11SpringActiveMqListenerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#791#792#0" expanded="true" />
-              </folding>
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -181,16 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/service/ExportProductService.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/ExportProductDao.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ExportProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/webapp/WEB-INF/pages/cargo/export/jExportUpdate.jsp" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/cargo/ExportAction.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/webapp/WEB-INF/pages/cargo/export/jExportUpdate.jsp" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/erp/job/TestJob.java" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/resources/applicationContext-job" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/resources/applicationContext-job.xml" />
-        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C03JavaMailTest.java" />
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/cargo/ContractAction.java" />
         <option value="$PROJECT_DIR$/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ContractServiceImpl.java" />
@@ -226,12 +218,22 @@
         <option value="$PROJECT_DIR$/ilcbs_cache/src/main/resources/applicationContext-cache.xml" />
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C08FastJsonTest.java" />
         <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java" />
-        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/java/com/xiaojihua/jms/TopicListener2.java" />
+        <option value="$PROJECT_DIR$/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml" />
+        <option value="$PROJECT_DIR$/ilcbs_client_service/src/main/java/cn/itcast/client/service/UserClientService.java" />
+        <option value="$PROJECT_DIR$/ilcbs_jms/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/ilcbs_utils/src/main/java/com/xiaojihua/utils/ImageUtil.java" />
+        <option value="$PROJECT_DIR$/ilcbs_jms/src/main/java/cn/itcast/jms/QueueListener.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/java/cn/itcast/jms/QueueListener.java" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext-mq.xml" />
+        <option value="$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/java/cn/itcast/client/action/UserAction.java" />
       </list>
     </option>
   </component>
@@ -287,6 +289,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -298,79 +301,37 @@
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_jms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_jms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_jms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_jms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
+              <item name="ilcbs_jms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaojihua" type="462c0819:PsiDirectoryNode" />
               <item name="jms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ilcbs_parent" type="462c0819:PsiDirectoryNode" />
-              <item name="ilcbs_server_web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ilcbs_parent" type="b2602c69:ProjectViewProjectNode" />
@@ -381,14 +342,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="上&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/..///////////jk_export" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/..//////////////jk_export" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -398,6 +358,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\ilcbs_parent\ilcbs_client_web\src\main\resources" />
       <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -408,11 +369,11 @@
       <recent name="com.xiaojihua.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\java\com\xiaojihua\jms" />
-      <recent name="I:\ilcbs_parent\ilcbs_server_web\src\main\resources" />
-      <recent name="I:\ilcbs_parent\ilcbs_cache\src\main\resources" />
-      <recent name="I:\ilcbs_parent\ilcbs_server_domain\src\main\java\com\xiaojihua\vo" />
+      <recent name="I:\ilcbs_parent\ilcbs_client_web\src\main\java\cn\itcast\client\action" />
+      <recent name="I:\ilcbs_parent\ilcbs_jms\src\main\resources" />
       <recent name="I:\ilcbs_parent\ilcbs_utils\src\main\java\com\xiaojihua\utils" />
+      <recent name="I:\ilcbs_parent\ilcbs_jms\src\main\java\cn\itcast\jms" />
+      <recent name="I:\ilcbs_parent\ilcbs_client_web\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -427,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.C10SpringActiveMqTest.testTopicSend">
+  <component name="RunManager" selected="Tomcat Server.ilcbsjms">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -584,6 +545,152 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="ilcbsclient" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ilcbs_client_web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ilcbsclient" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ilcbs_parent_2" />
+        <option name="HTTP_PORT" value="8090" />
+        <option name="JNDI_PORT" value="1100" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="2459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ilcbs_client_web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="ilcbsjms" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ilcbs_jms:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ilcbsjms" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ilcbs_parent_3" />
+        <option name="HTTP_PORT" value="8091" />
+        <option name="JNDI_PORT" value="1101" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="2495" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ilcbs_jms:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration name="ilcbstomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.52" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -658,6 +765,8 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.ilcbstomcat" />
+      <item itemvalue="Tomcat Server.ilcbsclient" />
+      <item itemvalue="Tomcat Server.ilcbsjms" />
       <item itemvalue="JUnit.C10SpringActiveMqTest.test1" />
       <item itemvalue="JUnit.C10SpringActiveMqTest.testQueueReceive" />
       <item itemvalue="JUnit.C11SpringActiveMqListenerTest.testRun" />
@@ -735,7 +844,10 @@
       <workItem from="1583487193848" duration="1055000" />
       <workItem from="1583567043007" duration="14865000" />
       <workItem from="1583745591617" duration="2233000" />
-      <workItem from="1583818301505" duration="4104000" />
+      <workItem from="1583818301505" duration="4985000" />
+      <workItem from="1583824824061" duration="45000" />
+      <workItem from="1583899196557" duration="2018000" />
+      <workItem from="1583907056655" duration="2146000" />
     </task>
     <servers />
   </component>
@@ -772,7 +884,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271428000" />
+    <option name="totallyTimeSpent" value="276518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -784,7 +896,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
@@ -807,20 +919,20 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.329429" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.39824304" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.60175693" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.329429" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5906433" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.22117962" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5900439" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49926794" visible="true" weight="0.35723862" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
       <window_info id="Web" order="6" sideWeight="0.50073206" side_tool="true" weight="0.22587131" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -883,146 +995,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-job.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/ContractServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_dao/src/main/java/com/xiaojihua/common/dao/SqlDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2626">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/SqlServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_utils/src/main/java/com/xiaojihua/utils/UtilFuns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1023" selection-start-line="1023" selection-end-line="1023" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/webapp/WEB-INF/pages/stat/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/webapp/WEB-INF/pages/stat/chart/pieDonut3D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_dao/src/main/java/com/xiaojihua/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_service/src/main/java/com/xiaojihua/serviceImpl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2134">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/webapp/WEB-INF/pages/stat/chart/column3D.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="24" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/stat/StatChartAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1342">
-          <caret line="82" column="52" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/webapp/WEB-INF/pages/stat/chart/linSmooth.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1804">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-ws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/erp/job/TestJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_client/src/main/java/cn/itcast/export/webservice/IEpService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/webapp/WEB-INF/pages/cargo/export/jExportUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/web/action/cargo/ContractAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_domain/src/main/java/com/xiaojihua/domain/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1041,9 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1738">
           <caret line="95" column="55" selection-start-line="95" selection-start-column="49" selection-end-line="95" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,13 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="374" column="32" selection-start-line="374" selection-start-column="32" selection-end-line="374" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C08FastJsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -1192,21 +1154,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C09ActiveMqTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
+        <state relative-caret-position="2794">
           <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3099#3533#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
-            <element signature="e#5778#6281#0" expanded="true" />
-            <element signature="e#6280#6281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="1122">
           <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
         </state>
       </provider>
@@ -1214,7 +1169,7 @@
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/java/com/xiaojihua/jms/QueueListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1234,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/main/resources/applicationContext-mq-consumer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="880">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
         </state>
       </provider>
@@ -1242,24 +1197,159 @@
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C11SpringActiveMqListenerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-          </folding>
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_server_web/src/test/java/com/xiaojihua/test/C10SpringActiveMqTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+        <state relative-caret-position="493">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6534" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_domain/src/main/java/cn/itcast/client/domain/CompanyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_domain/src/main/java/cn/itcast/client/domain/UserClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_domain/src/main/java/cn/itcast/client/domain/UserinfoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_dao/src/main/java/cn/itcast/client/dao/CompanyDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_dao/src/main/java/cn/itcast/client/dao/UserClientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_service/src/main/java/cn/itcast/client/service/UserClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_utils/src/main/java/com/xiaojihua/utils/SmsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#905#1099#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1517#1938#0" expanded="true" />
-            <element signature="e#1937#1938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext-cache.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="430" column="21" selection-start-line="430" selection-start-column="21" selection-end-line="430" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/resources/applicationContext-mq-consumer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/resources/applicationContext-cache.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/java/cn/itcast/client/action/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/resources/applicationContext-mq.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_client_web/src/main/java/cn/itcast/client/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="138" column="8" lean-forward="true" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ilcbs_parent/ilcbs_jms/src/main/java/cn/itcast/jms/QueueListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

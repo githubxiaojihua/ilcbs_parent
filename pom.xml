@@ -441,6 +441,23 @@
             <version>2.0.1</version>
         </dependency>
 
+
+        <!-- 阿里短信坐标begin -->
+        <!-- 由于在maven中心仓库中没有，因此需要安装到本地仓库
+             然后再进行引用
+        -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 阿里短信坐标end -->
+
     </dependencies>
 
     <build>

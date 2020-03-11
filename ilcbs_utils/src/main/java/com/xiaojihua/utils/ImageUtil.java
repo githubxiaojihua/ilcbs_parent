@@ -10,11 +10,7 @@ import java.io.OutputStream;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
-/**
- * 生成随机验证码
- * @author Administrator
- *
- */
+
 public class ImageUtil {
 	private static String[] strs = { "a", "b", "c", "d", "e", "f", "g", "h",
 			"i", "j", "k", "m", "n", "p", "q", "r", "s", "t", "u",
@@ -145,7 +141,7 @@ public class ImageUtil {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		FileOutputStream out = new FileOutputStream("E:/img/c.png");
+		FileOutputStream out = new FileOutputStream("E:/c.png");
 		
 		String str = ImageUtil.getRundomStr();
 		System.out.println(str);
